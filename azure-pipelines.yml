@@ -11,9 +11,6 @@ trigger:
   paths:
     exclude:
     - azure-pipelines.yml
-    - azure-pipelines-TagnRelease.yml
-    - azure-pipelines-deploy.yml
-    - azure-pipelines-deploy-prod.yml
     - pom.xml
 
 pool:
