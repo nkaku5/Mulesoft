@@ -15,7 +15,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.2.2-hf2</app.runtime>
-		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 	</properties>
 	<build>
 		<plugins>
@@ -26,6 +26,7 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>	
+				<skipDeploymentVerification>true</skipDeploymentVerification>
 					<uri>https://anypoint.mulesoft.com</uri>
 					<muleVersion>${app.runtime}</muleVersion>
 					<server>${server}</server>
@@ -76,7 +77,7 @@
             <id>mulesoft-releases</id>
             <name>mulesoft release repository</name>
             <layout>default</layout>
-            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+            <url>https://repository.mulesoft.org/releases/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
