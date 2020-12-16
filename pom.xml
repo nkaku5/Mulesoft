@@ -17,9 +17,6 @@
 		<app.runtime>4.2.2-hf2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
-	<profiles>
-		<profile>
-			<id>cloudhub-deployment</id>
 	<build>
 		<plugins>
 			<plugin>
@@ -48,20 +45,9 @@
 				    </properties>
 				</cloudHubDeployment>
 				</configuration>
-				<executions>
-					<execution>
-						<id>deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
-	</profile>
-	</profiles>	
 	
 
 	<dependencies>
