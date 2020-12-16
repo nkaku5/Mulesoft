@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="input" format="json">
+      <types:shape format="weave" example="examples/example-1.json"><![CDATA[%dw 2.0
+
+type input = {|
+  employees: Array<{|    empId: String,     empName: String,     empSalary: String,     empDept: String,     deptName: String,     jobTitle: String,     region: String,     phoneNumber: String,     email: String  |}>
+|} {"example": "{\\\"employees\\\":[{\\\"empId\\\":\\\"1\\\",\\\"empName\\\":\\\"nagarjuna\\\",\\\"empSalary\\\":\\\"20000\\\",\\\"empDept\\\":\\\"1\\\",\\\"deptName\\\":\\\"it\\\",\\\"jobTitle\\\":\\\"developer\\\",\\\"region\\\":\\\"USA\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"naga@gmail.com\\\"},{\\\"empId\\\":\\\"2\\\",\\\"empName\\\":\\\"nagesh\\\",\\\"empSalary\\\":\\\"30000\\\",\\\"empDept\\\":\\\"3\\\",\\\"deptName\\\":\\\"science\\\",\\\"jobTitle\\\":\\\"Consultant\\\",\\\"region\\\":\\\"USA\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"nagesh@gmail.com\\\"},{\\\"empId\\\":\\\"3\\\",\\\"empName\\\":\\\"nagamani\\\",\\\"empSalary\\\":\\\"40000\\\",\\\"empDept\\\":\\\"2\\\",\\\"deptName\\\":\\\"physics\\\",\\\"jobTitle\\\":\\\"developer\\\",\\\"region\\\":\\\"IN\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"naga@gmail.com\\\"},{\\\"empId\\\":\\\"4\\\",\\\"empName\\\":\\\"dhana\\\",\\\"empSalary\\\":\\\"50000\\\",\\\"empDept\\\":\\\"4\\\",\\\"deptName\\\":\\\"physics\\\",\\\"jobTitle\\\":\\\"developer\\\",\\\"region\\\":\\\"UK\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"dhana@gmail.com\\\"},{\\\"empId\\\":\\\"5\\\",\\\"empName\\\":\\\"ramaiah\\\",\\\"empSalary\\\":\\\"50000\\\",\\\"empDept\\\":\\\"4\\\",\\\"deptName\\\":\\\"chemistry\\\",\\\"jobTitle\\\":\\\"developer\\\",\\\"region\\\":\\\"UK\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"ramaiah@gmail.com\\\"},{\\\"empId\\\":\\\"6\\\",\\\"empName\\\":\\\"narasamma\\\",\\\"empSalary\\\":\\\"50000\\\",\\\"empDept\\\":\\\"4\\\",\\\"deptName\\\":\\\"physics\\\",\\\"jobTitle\\\":\\\"softwareEngineer\\\",\\\"region\\\":\\\"UK\\\",\\\"phoneNumber\\\":\\\"984784744646\\\",\\\"email\\\":\\\"narasamma@gmail.com\\\"}]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#3b1c2319-164f-4fed-9062-8b4a125da048">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="input"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
