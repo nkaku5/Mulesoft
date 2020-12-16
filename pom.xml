@@ -34,6 +34,7 @@
 					<workers>${workers}</workers>
 					<objectStoreV2>true</objectStoreV2>
 					<applicationName>${app.name}</applicationName>
+					
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
@@ -75,7 +76,7 @@
             <id>mulesoft-releases</id>
             <name>mulesoft release repository</name>
             <layout>default</layout>
-            <url>https://repository.mulesoft.org/releases/</url>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
