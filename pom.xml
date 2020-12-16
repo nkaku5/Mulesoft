@@ -15,7 +15,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.2.2-hf2</app.runtime>
-		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.0.0</mule.maven.plugin.version>
 	</properties>
 	<build>
 		<plugins>
@@ -26,7 +26,6 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>	
-				<skipDeploymentVerification>true</skipDeploymentVerification>
 					<uri>https://anypoint.mulesoft.com</uri>
 					<muleVersion>${app.runtime}</muleVersion>
 					<server>${server}</server>
@@ -35,7 +34,10 @@
 					<workers>${workers}</workers>
 					<objectStoreV2>true</objectStoreV2>
 					<applicationName>${app.name}</applicationName>
-					
+					<region>eu-west-2</region>
+					<properties>
+				        <key>value</key>
+				    </properties>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
